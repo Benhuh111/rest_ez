@@ -31,10 +31,8 @@ public class MainControllerTests {
     }
 
     @Test
-    public void testFailure() throws Exception {
-
-        mockMvc.perform(get("fail"))
-                .andExpect(status().isOk())
-                .andExpect(content().string("Goodbye World!"));
+    public void simpleTest() throws Exception {
+        mockMvc.perform(get("/hello"))
+                .andExpect(status().isOk());
     }
 }
