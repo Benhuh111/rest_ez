@@ -8,6 +8,11 @@ public class MainController {
 
     // http://localhost:8080/hello
 
+    @GetMapping("/")
+    public String gethome(){
+        return "Hello from my deployed app!";
+    }
+
     @GetMapping("/hello")
     public String hello() {
         return "Hello World!";
